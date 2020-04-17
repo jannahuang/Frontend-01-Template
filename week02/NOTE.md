@@ -27,12 +27,14 @@
 - ｜表示或
 - +表示至少一次
 
-四则运算：1+2\*3
+四则运算：1+2\*3  
 终结符：
 
 - Number
 - +-\*/
-  非终结符：
+
+非终结符：
+
 - MultiplicativeExpression
 - AdditiveExpression
 
@@ -63,20 +65,20 @@
 - 0 型 无限制文法
   - ? ::= ?
 - 1 型 上下文相关文法
-  - ?<A>? ::= ?<B>?
+  - ?< A >? ::= ?< B >?
 - 2 型 上下文无关文法
-  - <A> ::= ?
+  - < A > ::= ?
 - 3 型 正则文法
-  - <A> ::= <A> ?
-  - <A> ::= ? <A>
+  - < A > ::= < A > ?
+  - < A > ::= ? < A >
 
 ### 其他产生式
 
-EBNF ABNF Customized  
-AdditiveExpression:  
- MultiplicativeExpression  
- AdditiveExpression + MultiplicativeExpression  
- AdditiveExpression - MultiplicativeExpression
+> EBNF ABNF Customized  
+> AdditiveExpression:  
+>  MultiplicativeExpression  
+>  AdditiveExpression + MultiplicativeExpression  
+>  AdditiveExpression - MultiplicativeExpression
 
 ### 现代语言的特例
 
@@ -119,7 +121,7 @@ AdditiveExpression:
 - 子类型
   - 逆变/协变
 
-> 凡是能用 Array<Parent> 的地方，都能用 Array<Child>
+> 凡是能用 Array<Parent> 的地方，都能用 Array<Child>  
 > 凡是能用 Function<Child> 的地方，都能用 Function<Parent>
 
 ### 一般命令式编程语言
