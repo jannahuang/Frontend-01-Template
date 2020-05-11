@@ -82,3 +82,71 @@ afoo();
 ### 参考名词：
 
 - OC： Objective-C 是一种通用、高级、面向对象的编程语言。它扩展了标准的 ANSI C 编程语言，将 Smalltalk 式的消息传递机制加入到 ANSI C 中。当前主要支持的编译器有 GCC 和 Clang（采用 LLVM 作为后端）。
+
+### JS 执行粒度
+
+- 宏任务
+- 微任务（Promise）
+- 函数调用（Execution Context）
+- 语句/声明
+- 表达式
+- 直接量/变量/this ......
+
+### Realm
+
+- JS Context => Realm
+- 宏任务
+- 微任务（Promise）
+- 函数调用（Execution Context）
+- 语句/声明
+- 表达式
+- 直接量/变量/this ......
+
+* AntV G6 可视化
+
+### 函数调用
+
+```javascript
+import {foo} from "foo.js"
+var i = 0
+console.log(i)
+foo()
+console.log(i)
+i++
+
+// foo.js
+function foo(){
+  var x = 1
+  console.log(x)
+}
+export foo
+```
+
+### Execution Context
+
+- ECMAScript Code Execution Context
+  - code evaluation state
+  - Function
+  - Script or Module
+  - Realm
+  - LexicalEnvironment
+  - VariableEnvironment
+- Generator Execution Contexts
+  - code evaluation state
+  - Function
+  - Script or Module
+  - Realm
+  - LexicalEnvironment
+  - VariableEnvironment
+  - Generator
+
+### LexicalEnvironment
+
+- this
+- new.target
+- super
+- 变量
+
+### VariableEnvironment
+
+VariableEnvironment 是个历史遗留的包袱，仅仅用于处理 var 声明。
