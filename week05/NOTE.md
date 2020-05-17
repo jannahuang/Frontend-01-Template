@@ -40,3 +40,17 @@ URL(HTTP) -> HTML(parse) -> DOM(css computing) -> DOM with CSS(layout) -> DOM wi
 - body
   -field=aaa&code=x%3D1
 
+### Response
+- status line
+  - HTTP/1.1 200 OK
+- headers
+  - Content-Type: text/html
+  - Data: Mon, 23 Dec 2019 06:46:19 GMT
+  - Connection: keep-alive
+  - Transfer-Encoding: chunked
+  - 
+- body
+  - 26
+  - <html><body> Hello Worl <body><html>
+  - 
+  - 0
