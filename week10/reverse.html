@@ -1,0 +1,31 @@
+<div id="a">
+  <span>1</span>
+  <p>2</p>
+  <a>3</a>
+  <div>4</div>
+</div>
+
+<script>
+let element = document.getElementById("a")
+
+function reverseChildren(element) {
+  // 普通写法
+  let children = Array.prototype.slice.call(element.childNodes)
+  for (let child of children) {
+    element.removeChild(child) // 其实dom树会自动remove，此步多余
+  }
+  children.reverse()
+  for (let child of children) {
+    element.appendChild(child)
+  }
+
+  // 更好写法
+  var l = element.childNodes.length
+  while (l-- > 0) {
+    element.appendChild(element.childNodes[l])
+  }
+}
+
+reverseChildren(element)
+
+</script>
